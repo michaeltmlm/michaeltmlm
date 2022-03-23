@@ -1,1 +1,93 @@
-// DIY Electric Drawer
+// DIY Electric Drawer. Every parts and coding are all self designed and build by MT
+//**** This code is based on arduino coding***
+// In this mini project, you will need*
+// arduino / programmer 
+// Stepper motor
+// Stepper driver (I prefer a4988)
+// ENd switch or push button
+// Power (5v for arduino and 12v for driver)
+// Transformer(optional)
+// 3d printed Parts (rack and pinion)
+// Glue/ Double side tape for installation of rack and fix of stepper motor
+
+
+// Define Constants
+int Lswitch = 12;
+  int flag = 0;
+// Connections to A4988
+
+const int dirPin = 2;  // Direction
+const int stepPin = 3; // Step
+
+// Motor steps per rotation
+const int STEPS_PER_REV = 200;
+ 
+void setup() {
+  
+Serial.begin(9600);   // Setup the pins as Outputs
+  pinMode(Lswitch,INPUT);
+  pinMode(stepPin,OUTPUT); 
+  pinMode(dirPin,OUTPUT);
+}
+void loop() {
+
+
+  if( (digitalRead(Lswitch) == LOW) && (flag == 0) ) 
+  {
+    Serial.println("button pushed"); 
+flag = 1; 
+delay(20); 
+  }
+  
+    if( (digitalRead(Lswitch) == HIGH) && (flag == 1) ) 
+  {
+    Serial.println("button release"); 
+flag = 0;
+delay(20); 
+  }
+  
+  if ( flag == 1 ) 
+  {
+   // Open the Drawer
+  // Set motor direction anti-clockwise
+  digitalWrite(dirPin,HIGH); 
+
+       for(int x = 0; x < (STEPS_PER_REV*5); x++) {
+    digitalWrite(stepPin,HIGH);
+    delayMicroseconds(3600);
+    digitalWrite(stepPin,LOW);
+    delayMicroseconds(3600);
+     }
+  
+  // Pause for three second
+  delay(3000);
+
+
+
+
+
+
+
+  // Close the drawer
+  // Set motor direction anti-clockwise
+  digitalWrite(dirPin,LOW); 
+
+    for(int x = 0; x < (STEPS_PER_REV*5); x++) {
+    digitalWrite(stepPin,HIGH);
+    delayMicroseconds(3600);
+    digitalWrite(stepPin,LOW);
+    delayMicroseconds(3600);
+  }
+  
+  
+
+  }
+  
+    if ( flag == 1 ) 
+  {
+
+  }
+  
+  digitalWrite(Lswitch, HIGH); 
+
+}
