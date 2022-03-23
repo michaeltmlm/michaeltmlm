@@ -1,4 +1,4 @@
-- 👋 Hi, I’m @michaeltmlm
+- 👋 Hi, I’m @michaeltmlm. I am very new to GitHub. Pls Give comments and suggestions
 - 👀 I’m interested in 3d printing/ automation / AI/ Machine Learning/ IOT
 - 🌱 I’m currently learning Engineering (Control/ Automation/ Industrial)
 - 💞️ I’m looking to collaborate on ...
