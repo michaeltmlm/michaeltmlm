@@ -1,8 +1,8 @@
 - 👋 Hi, I’m @michaeltmlm
 - 👀 I’m interested in 3d printing/ automation / AI/ Machine Learning/ IOT
-- 🌱 I’m currently learning Engineering
+- 🌱 I’m currently learning Engineering (Control/ Automation/ Industrial)
 - 💞️ I’m looking to collaborate on ...
-- 📫 How to reach me ...
+- 📫 How to reach me ... by email: tmltml.personal@gmail.com
 
 <!---
 michaeltmlm/michaeltmlm is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
