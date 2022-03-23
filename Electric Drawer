@@ -10,6 +10,15 @@
 // 3d printed Parts (rack and pinion)
 // Glue/ Double side tape for installation of rack and fix of stepper motor
 
+//The 3d printed parts file can be found in here 
+//https://www.thingiverse.com/thing:5327632
+
+
+//Demonstration of electric drawer:
+//https://youtu.be/_9dLJOpSU0k
+
+
+
 
 // Define Constants
 int Lswitch = 12;
